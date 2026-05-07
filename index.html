@@ -1,211 +1,1060 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NAIHO Electronics | Electrodomesticos de calidad brasilera</title>
-    <meta
-      name="description"
-      content="NAIHO Electronics: electrodomesticos con tecnologia, diseno, confianza y servicio tecnico autorizado en Bolivia."
-    >
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="NAIHO Electronics">
-        <span>NAIHO</span>
-        <small>Electronics</small>
-      </a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NAIHO Electronics | Calidad Brasilera para tu Hogar</title>
+  <meta name="description" content="NAIHO Electronics: electrodomésticos con tecnología brasilera, diseño moderno y servicio técnico autorizado en Bolivia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────── */
+    :root {
+      --blue:        #07588c;
+      --blue-dark:   #063a5e;
+      --blue-deep:   #031e30;
+      --green:       #0f6541;
+      --green-mid:   #1a8556;
+      --green-soft:  #dfeee4;
+      --yellow:      #f0cc32;
+      --yellow-warm: #e8b800;
+      --ink:         #0d1f2d;
+      --muted:       #5a7080;
+      --line:        #d4e4ed;
+      --paper:       #f5f2eb;
+      --white:       #ffffff;
+    }
 
-      <nav class="main-nav" aria-label="Navegacion principal">
-        <a href="#productos">Productos</a>
-        <a href="#calidad">Calidad</a>
-        <a href="#servicio">Servicio</a>
-      </nav>
+    /* ─── RESET ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
 
-      <a class="header-action" href="#servicio">Soporte tecnico</a>
-    </header>
+    /* ─── UTILITY ────────────────────────────────────── */
+    .container {
+      width: min(1200px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+    .kicker::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--yellow);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 800;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: transform .18s, box-shadow .18s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+      box-shadow: 0 8px 24px rgba(15,101,65,.28);
+    }
+    .btn-primary:hover { box-shadow: 0 14px 32px rgba(15,101,65,.38); }
+    .btn-outline {
+      border: 2px solid var(--white);
+      color: var(--white);
+      background: transparent;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
 
-    <main>
-      <section class="hero" id="inicio">
-        <div class="hero-content">
-          <p class="kicker">Change your home</p>
-          <h1>Calidad brasilera para tu hogar</h1>
-          <p class="hero-text">
-            Electrodomesticos NAIHO con presencia moderna, bajo consumo y respaldo tecnico nacional.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#productos">Ver productos</a>
-            <a class="button ghost" href="#servicio">Buscar servicio</a>
+    /* ─── HEADER ─────────────────────────────────────── */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      background: rgba(3, 30, 48, 0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(240, 204, 50, 0.15);
+      transition: background .3s;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .brand-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.4rem;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+    .brand-sub {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-top: -2px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .main-nav a {
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,.82);
+      transition: color .2s, background .2s;
+    }
+    .main-nav a:hover {
+      color: var(--white);
+      background: rgba(255,255,255,.08);
+    }
+    .nav-cta {
+      margin-left: 12px;
+      padding: 10px 22px;
+      background: var(--yellow);
+      color: var(--blue-deep) !important;
+      border-radius: 4px;
+      font-weight: 900 !important;
+      font-size: 0.82rem !important;
+      letter-spacing: 0.06em !important;
+      transition: background .2s, transform .15s !important;
+    }
+    .nav-cta:hover {
+      background: #e8b800 !important;
+      transform: translateY(-1px);
+    }
+
+    /* ─── HERO ───────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding-top: 72px;
+      background:
+        linear-gradient(135deg, var(--blue-deep) 0%, #062d4a 55%, #0a4a2e 100%);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 10% 50%, rgba(15,101,65,.22), transparent),
+        radial-gradient(ellipse 40% 60% at 90% 20%, rgba(240,204,50,.08), transparent);
+      pointer-events: none;
+    }
+
+    /* diagonal slice */
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: 0; top: 0; bottom: 0;
+      width: 52%;
+      background: rgba(255,255,255,.025);
+      clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: clamp(40px, 6vw, 100px) clamp(20px, 4vw, 60px) clamp(40px, 6vw, 100px) clamp(20px, 5vw, 80px);
+    }
+
+    .hero-tagline {
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4rem, 8vw, 8rem);
+      line-height: 0.92;
+      color: var(--white);
+      letter-spacing: 0.01em;
+      margin-bottom: 24px;
+    }
+    .hero-title .accent {
+      color: var(--yellow);
+      display: block;
+    }
+
+    .hero-desc {
+      max-width: 480px;
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      line-height: 1.6;
+      color: rgba(255,255,255,.72);
+      margin-bottom: 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 52px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      color: var(--yellow);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+    }
+
+    /* right panel */
+    .hero-media {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 40px 40px 0;
+    }
+
+    .hero-img-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 540px;
+    }
+
+    .hero-img-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 18px -14px -14px 18px;
+      background: linear-gradient(135deg, var(--green), var(--yellow-warm));
+      border-radius: 6px;
+      z-index: 0;
+      opacity: .7;
+    }
+
+    .hero-img-wrap img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 32px 80px rgba(0,0,0,.5);
+    }
+
+    .brasil-badge {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      z-index: 3;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 6px solid var(--yellow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      padding: 10px;
+    }
+    .brasil-badge .b-flag {
+      font-size: 1.4rem;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .brasil-badge span {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      line-height: 1.2;
+    }
+
+    /* ─── VALUE ROW ──────────────────────────────────── */
+    .value-section {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+    .value-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      divide-x: 1px solid var(--line);
+    }
+    .value-item {
+      padding: 40px 36px;
+      border-right: 1px solid var(--line);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: background .2s;
+    }
+    .value-item:last-child { border-right: none; }
+    .value-item:hover { background: #f8fbfc; }
+
+    .value-icon {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 6px;
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .value-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--white);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .value-text h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.22rem;
+      font-weight: 900;
+      color: var(--blue-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+    .value-text p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ─── PRODUCTS ───────────────────────────────────── */
+    .section {
+      padding: 96px 0;
+    }
+    .section-head {
+      margin-bottom: 56px;
+    }
+    .section-head h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 0.92;
+      color: var(--blue-dark);
+      letter-spacing: 0.02em;
+      margin: 14px 0 16px;
+    }
+    .section-head p {
+      max-width: 560px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .products-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+    }
+
+    .product-feature {
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 50px rgba(6,58,94,.08);
+      display: grid;
+      grid-template-rows: 1fr auto;
+      grid-row: span 3;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .product-feature:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 70px rgba(6,58,94,.14);
+    }
+
+    .product-img {
+      overflow: hidden;
+      background: linear-gradient(160deg, #e8f4f8, #f5fafc);
+    }
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      object-fit: cover;
+      object-position: center;
+      transition: transform .5s;
+    }
+    .product-feature:hover .product-img img {
+      transform: scale(1.03);
+    }
+
+    .product-body {
+      padding: 30px;
+    }
+    .product-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--blue);
+      color: var(--white);
+      border-radius: 3px;
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .product-body h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--blue-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 10px;
+    }
+    .product-body p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .category-card {
+      padding: 28px;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(6,58,94,.06);
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+      cursor: default;
+    }
+    .category-card:hover {
+      border-color: var(--green);
+      transform: translateX(4px);
+      box-shadow: 0 12px 32px rgba(15,101,65,.12);
+    }
+
+    .cat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: var(--line);
+      line-height: 1;
+      margin-bottom: 8px;
+      transition: color .2s;
+    }
+    .category-card:hover .cat-num { color: var(--green-soft); }
+
+    .category-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--blue-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+    .category-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ─── QUALITY BAND ───────────────────────────────── */
+    .quality-section {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(6,58,94,.97) 0%, rgba(15,101,65,.92) 100%);
+    }
+    .quality-section::before {
+      content: 'NAIHO';
+      position: absolute;
+      right: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28vw;
+      color: rgba(255,255,255,.03);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .quality-inner {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.65fr) 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 96px 0;
+    }
+
+    .quality-head .kicker { color: var(--yellow); }
+    .quality-head .kicker::before { background: var(--yellow); }
+    .quality-head h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 0.92;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      margin: 14px 0 20px;
+    }
+    .quality-head p {
+      color: rgba(255,255,255,.65);
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .quality-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 20px;
+      border-radius: 6px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      transition: background .2s;
+    }
+    .quality-item:hover { background: rgba(255,255,255,.14); }
+
+    .q-check {
+      flex-shrink: 0;
+      margin-top: 2px;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      background: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .q-check svg {
+      width: 11px;
+      height: 11px;
+      stroke: var(--blue-deep);
+      fill: none;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .quality-item span {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: rgba(255,255,255,.9);
+      line-height: 1.4;
+    }
+
+    /* ─── SERVICE ────────────────────────────────────── */
+    .service-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .service-img-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(6,58,94,.14);
+      border: 1px solid var(--line);
+    }
+    .service-img-card img {
+      width: 100%;
+      max-height: 640px;
+      object-fit: cover;
+    }
+
+    .table-card {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(6,58,94,.07);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+    }
+    thead tr {
+      background: var(--blue-dark);
+    }
+    th {
+      padding: 16px 20px;
+      text-align: left;
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    td {
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:nth-child(even) { background: #f7fafb; }
+    tbody tr:hover { background: #edf5f8; }
+    td:first-child {
+      font-weight: 800;
+      color: var(--blue-dark);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    td:last-child {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* Oruro highlight */
+    tbody tr.highlight td {
+      background: rgba(15,101,65,.06) !important;
+      border-left: 3px solid var(--green);
+    }
+    tbody tr.highlight td:first-child { color: var(--green); }
+
+    /* ─── FOOTER ─────────────────────────────────────── */
+    .site-footer {
+      background: var(--blue-deep);
+      border-top: 3px solid var(--yellow);
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      padding: 36px 0;
+    }
+    .footer-brand .brand-name { color: var(--white); font-size: 2rem; }
+    .footer-brand .brand-sub { color: var(--yellow); }
+    .footer-tagline {
+      font-style: italic;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,.45);
+      margin-top: 6px;
+    }
+    .footer-back {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color .2s;
+    }
+    .footer-back:hover { color: var(--yellow); }
+    .footer-back::before {
+      content: '↑';
+      font-size: 1.1rem;
+    }
+
+    /* ─── SCROLL ANIMATION ───────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-media { min-height: auto; padding: 0 20px 60px; }
+      .hero-img-wrap { max-width: 440px; margin: 0 auto; }
+      .hero-stats { flex-wrap: wrap; gap: 24px; }
+      .value-strip { grid-template-columns: 1fr; }
+      .value-item { border-right: none; border-bottom: 1px solid var(--line); }
+      .value-item:last-child { border-bottom: none; }
+      .products-layout { grid-template-columns: 1fr; }
+      .product-feature { grid-row: auto; }
+      .quality-inner { grid-template-columns: 1fr; }
+      .quality-grid { grid-template-columns: 1fr; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service-img-card { display: none; }
+    }
+
+    @media (max-width: 700px) {
+      .main-nav { display: none; }
+      .hero-title { font-size: clamp(3.2rem, 15vw, 5rem); }
+      .section { padding: 64px 0; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HEADER ════════════════════════════════════ -->
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio">
+      <span class="brand-name">NAIHO</span>
+      <span class="brand-sub">Electronics</span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#productos">Productos</a>
+      <a href="#calidad">Calidad</a>
+      <a href="#servicio">Servicio</a>
+      <a href="#servicio" class="nav-cta">Soporte técnico</a>
+    </nav>
+  </header>
+
+  <!-- ═══ HERO ══════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="kicker hero-tagline">Change your home</p>
+      <h1 class="hero-title">
+        Calidad<br>
+        <span class="accent">Brasilera</span><br>
+        Para tu hogar
+      </h1>
+      <p class="hero-desc">
+        Electrodomésticos NAIHO con tecnología moderna, menor consumo energético y respaldo técnico autorizado en toda Bolivia.
+      </p>
+      <div class="hero-actions">
+        <a href="#productos" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          Ver productos
+        </a>
+        <a href="#servicio" class="btn btn-outline">
+          Buscar servicio técnico
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Ciudades</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">A+</span>
+          <span class="stat-label">Eficiencia</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">R600</span>
+          <span class="stat-label">Motor</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <div class="hero-img-wrap">
+        <img src="naiho-linea.jpeg" alt="Línea completa de electrodomésticos NAIHO — refrigerador, lavadora y cocina de acero inoxidable">
+        <div class="brasil-badge">
+          <span class="b-flag">🇧🇷</span>
+          <span>Industria<br>Brasilera</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VALUE STRIP ════════════════════════════════ -->
+  <div class="value-section">
+    <div class="value-strip">
+      <div class="value-item reveal">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="value-text">
+          <h3>Tecnología</h3>
+          <p>Soluciones pensadas para el uso diario con menos fallas y mayor durabilidad.</p>
+        </div>
+      </div>
+      <div class="value-item reveal reveal-delay-1">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <div class="value-text">
+          <h3>Diseño</h3>
+          <p>Acabados en acero inoxidable para cocinas modernas y espacios actuales.</p>
+        </div>
+      </div>
+      <div class="value-item reveal reveal-delay-2">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="value-text">
+          <h3>Confianza</h3>
+          <p>Garantía y soporte técnico autorizado a nivel nacional en Bolivia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PRODUCTS ═══════════════════════════════════ -->
+  <section class="section" id="productos">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">Línea completa</p>
+        <h2>Electrodomésticos<br>NAIHO</h2>
+        <p>Una gama completa para refrigeración, lavado y cocina. Estética de acero, funcionamiento eficiente y respaldo técnico en toda Bolivia.</p>
+      </div>
+
+      <div class="products-layout">
+        <article class="product-feature reveal">
+          <div class="product-img">
+            <img src="naiho-modelo.jpeg" alt="Refrigerador NAIHO modelo NH-I220F de acero inoxidable">
           </div>
-        </div>
-
-        <div class="hero-media" aria-label="Catalogo NAIHO">
-          <img class="media-main" src="assets/naiho-linea.jpeg" alt="Linea completa de electrodomesticos NAIHO">
-          <div class="country-seal">
-            <span>Industria</span>
-            <strong>Brasilera</strong>
+          <div class="product-body">
+            <span class="product-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Modelo NH-I220F
+            </span>
+            <h3>Refrigerador de acero inoxidable</h3>
+            <p>Ideal para hogares que necesitan rendimiento estable, menor consumo y buena resistencia en climas cálidos o húmedos. Motor R600 de larga vida útil y condensador exterior.</p>
           </div>
-        </div>
-      </section>
-
-      <section class="value-row" aria-label="Pilares de marca">
-        <article>
-          <span>Tec</span>
-          <strong>Tecnologia</strong>
-          <p>Soluciones pensadas para el uso diario.</p>
         </article>
-        <article>
-          <span>Dis</span>
-          <strong>Diseno</strong>
-          <p>Acabados modernos para cocinas actuales.</p>
+
+        <article class="category-card reveal reveal-delay-1">
+          <div class="cat-num">01</div>
+          <h3>Refrigeración</h3>
+          <p>Conserva tus alimentos con equipos robustos, prácticos y de bajo consumo energético A+.</p>
         </article>
-        <article>
-          <span>Con</span>
-          <strong>Confianza</strong>
-          <p>Garantia y soporte a nivel nacional.</p>
+        <article class="category-card reveal reveal-delay-2">
+          <div class="cat-num">02</div>
+          <h3>Lavado</h3>
+          <p>Lavadoras con controles claros, gran presencia visual y uso sencillo para toda la familia.</p>
         </article>
-      </section>
+        <article class="category-card reveal reveal-delay-3">
+          <div class="cat-num">03</div>
+          <h3>Cocina</h3>
+          <p>Cocinas y hornos con acabado metálico para completar cualquier espacio del hogar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      <section class="section products" id="productos">
-        <div class="section-title">
-          <p class="kicker">Linea completa</p>
-          <h2>Electrodomesticos NAIHO</h2>
-          <p>Una gama para refrigeracion, lavado y cocina con estetica de acero, funcionamiento eficiente y respaldo tecnico.</p>
-        </div>
-
-        <div class="product-grid">
-          <article class="product-feature">
-            <div class="product-photo">
-              <img src="assets/naiho-modelo.jpeg" alt="Refrigerador NAIHO modelo NH-I220F">
-            </div>
-            <div class="product-info">
-              <p class="model">Modelo NH-I220F</p>
-              <h3>Refrigerador de acero inoxidable</h3>
-              <p>Ideal para hogares que necesitan rendimiento estable, menor consumo y buena resistencia en climas calidos o humedos.</p>
-            </div>
-          </article>
-
-          <article class="category-card">
-            <span>01</span>
-            <h3>Refrigeracion</h3>
-            <p>Conserva tus alimentos con equipos robustos, practicos y de bajo consumo.</p>
-          </article>
-          <article class="category-card">
-            <span>02</span>
-            <h3>Lavado</h3>
-            <p>Lavadoras con controles claros, gran presencia visual y uso sencillo.</p>
-          </article>
-          <article class="category-card">
-            <span>03</span>
-            <h3>Cocina</h3>
-            <p>Cocinas y hornos con acabado metalico para completar el espacio.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="quality-band" id="calidad">
-        <div>
+  <!-- ═══ QUALITY ════════════════════════════════════ -->
+  <section class="quality-section" id="calidad">
+    <div class="container">
+      <div class="quality-inner">
+        <div class="quality-head reveal">
           <p class="kicker">Calidad brasilera</p>
           <h2>Hecho para durar</h2>
+          <p>Cada producto NAIHO es fabricado con estándares de la industria brasilera, certificado y diseñado para las condiciones del mercado boliviano.</p>
         </div>
-        <ul class="quality-list">
-          <li>Mayor tolerancia a variaciones electricas</li>
-          <li>Motor R600 de larga vida util</li>
-          <li>Menor consumo energetico A+</li>
-          <li>Acabado en acero inoxidable</li>
-          <li>Capa anticorrosiva para zonas humedas y calidas</li>
-          <li>Menos componentes electronicos y menos fallas</li>
-          <li>Garantia a nivel nacional</li>
-          <li>Condensador exterior</li>
-        </ul>
-      </section>
-
-      <section class="section service" id="servicio">
-        <div class="section-title">
-          <p class="kicker">Servicios tecnicos autorizados</p>
-          <h2>Soporte en Bolivia</h2>
-          <p>Encuentra atencion autorizada por ciudad, direccion y contacto.</p>
-        </div>
-
-        <div class="service-layout">
-          <aside class="service-image">
-            <img src="assets/naiho-servicio.jpeg" alt="Listado de servicios tecnicos autorizados NAIHO">
-          </aside>
-
-          <div class="table-card">
-            <table>
-              <thead>
-                <tr>
-                  <th>Ciudad</th>
-                  <th>Direccion</th>
-                  <th>Contactos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>La Paz</td>
-                  <td>Eloy Salmon - Galeria Lily, Calle Antonio Gallardo N 77</td>
-                  <td>Telf.: 2-2462234<br>Cel.: 72587956</td>
-                </tr>
-                <tr>
-                  <td>La Paz</td>
-                  <td>Villa Dolores - Entre calle 5 y 6, Calle Francisco Carvajal N 37</td>
-                  <td>Telf.: 2-2462234<br>Cel.: 72585226 / 75839997</td>
-                </tr>
-                <tr>
-                  <td>Cochabamba</td>
-                  <td>Calle Pedro Bedregal, Calle Jose Curtinas N 22</td>
-                  <td>Cel.: 65312173 / 79777909</td>
-                </tr>
-                <tr>
-                  <td>Oruro</td>
-                  <td>Entre Potosi y 6 de Octubre, Calle Murguia N 443</td>
-                  <td>Telf.: 2-5289994<br>Cel.: 76130083</td>
-                </tr>
-                <tr>
-                  <td>Santa Cruz</td>
-                  <td>3er Anillo Externo entre Av. Alemana y Mutualista, Calle Combate N 3120</td>
-                  <td>Telf.: 3-3241862<br>Cel.: 75097319</td>
-                </tr>
-                <tr>
-                  <td>Sucre</td>
-                  <td>Zona Mercado Campesino, Calle Marzana N 145</td>
-                  <td>Cel.: 70327944 / 78931820</td>
-                </tr>
-                <tr>
-                  <td>Tarija</td>
-                  <td>Entre Calle Corrado y Luis Echazu, Calle Ballivian N 916</td>
-                  <td>Cel.: 6655455 / 67384111</td>
-                </tr>
-                <tr>
-                  <td>Potosi</td>
-                  <td>Entre Calle Cerrudo y Calle Omiste, Calle Bustillo N 832</td>
-                  <td>Cel.: 71816023</td>
-                </tr>
-                <tr>
-                  <td>Trinidad</td>
-                  <td>Plaza Principal - Club Social 18 de Noviembre Galeria, Calle Nicolas Suarez</td>
-                  <td>Cel.: 78289059 / 72821655</td>
-                </tr>
-                <tr>
-                  <td>Cobija</td>
-                  <td>Av. Pando esquina 27 de Mayo</td>
-                  <td>Cel.: 74757870</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="quality-grid">
+          <div class="quality-item reveal reveal-delay-1">
+            <div class="q-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Mayor tolerancia a variaciones eléctricas</span>
+          </div>
+          <div class="quality-item reveal reveal-delay-1">
+            <div class="q-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Motor R600 de larga vida útil</span>
+          </div>
+          <div class="quality-item reveal reveal-delay-2">
+            <div class="q-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Menor consumo energético A+</span>
+          </div>
+          <div class="quality-item reveal reveal-delay-2">
+            <div class="q-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Acabado en acero inoxidable</span>
+          </div>
+          <div class="quality-item reveal reveal-delay-3">
+            <div class="q-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Capa anticorrosiva para zonas húmedas</span>
+          </div>
+          <div class="quality-item reveal reveal-delay-3">
+            <div class="q-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Menos componentes electrónicos, menos fallas</span>
+          </div>
+          <div class="quality-item reveal">
+            <div class="q-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Garantía a nivel nacional</span>
+          </div>
+          <div class="quality-item reveal">
+            <div class="q-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Condensador exterior + Certificación 2024</span>
           </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <strong>NAIHO Electronics</strong>
-        <span>Change your home</span>
       </div>
-      <a href="#inicio">Volver arriba</a>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICE ════════════════════════════════════ -->
+  <section class="section" id="servicio">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">Servicios técnicos autorizados</p>
+        <h2>Soporte en<br>Bolivia</h2>
+        <p>Encuentra atención técnica autorizada por ciudad, dirección y contacto. Estamos presentes en los 9 departamentos.</p>
+      </div>
+
+      <div class="service-grid">
+        <aside class="service-img-card reveal">
+          <img src="naiho-servicio.jpeg" alt="Lista oficial de servicios técnicos autorizados NAIHO en Bolivia">
+        </aside>
+
+        <div class="table-card reveal reveal-delay-1">
+          <table>
+            <thead>
+              <tr>
+                <th>Ciudad</th>
+                <th>Dirección</th>
+                <th>Contactos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>La Paz</td>
+                <td>Eloy Salmon – Galería Lily, Calle Antonio Gallardo Nº 77</td>
+                <td>Telf.: 2-2462234<br>Cel.: 72587956</td>
+              </tr>
+              <tr>
+                <td>La Paz</td>
+                <td>Villa Dolores – Entre calle 5 y 6, Calle Francisco Carvajal Nº 37</td>
+                <td>Telf.: 2-2462234<br>Cel.: 72585226 / 75839997</td>
+              </tr>
+              <tr>
+                <td>Cochabamba</td>
+                <td>Calle Pedro Bedregal, Calle José Curtiñas Nº 22</td>
+                <td>Cel.: 65312173 / 79777909</td>
+              </tr>
+              <tr class="highlight">
+                <td>Oruro</td>
+                <td>Entre Potosí y 6 de Octubre, Calle Murguia Nº 443</td>
+                <td>Telf.: 2-5289994<br>Cel.: 76130083</td>
+              </tr>
+              <tr>
+                <td>Santa Cruz</td>
+                <td>3er Anillo Externo entre Av. Alemana y Mutualista, Calle Combate Nº 3120</td>
+                <td>Telf.: 3-3241862<br>Cel.: 75097319</td>
+              </tr>
+              <tr>
+                <td>Sucre</td>
+                <td>Zona Mercado Campesino, Calle Marzana Nº 145</td>
+                <td>Cel.: 70327944 / 78931820</td>
+              </tr>
+              <tr>
+                <td>Tarija</td>
+                <td>Entre Calle Corrado y Luis Echazú, Calle Ballivián Nº 916</td>
+                <td>Cel.: 6655455 / 67384111</td>
+              </tr>
+              <tr>
+                <td>Potosí</td>
+                <td>Entre Calle Cerrudo y Calle Omiste, Calle Bustillo Nº 832</td>
+                <td>Cel.: 71816023</td>
+              </tr>
+              <tr>
+                <td>Trinidad</td>
+                <td>Plaza Principal – Club Social 18 de Noviembre Galería, Calle Nicolás Suárez</td>
+                <td>Cel.: 78289059 / 72821655</td>
+              </tr>
+              <tr>
+                <td>Cobija</td>
+                <td>Av. Pando esquina 27 de Mayo</td>
+                <td>Cel.: 74757870</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-name">NAIHO</span>
+            <span class="brand-sub">Electronics</span>
+          </div>
+          <p class="footer-tagline">Change your home — Industria Brasilera</p>
+        </div>
+        <a href="#inicio" class="footer-back">Volver arriba</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Header background on scroll
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      header.style.background = window.scrollY > 40
+        ? 'rgba(3,30,48,0.98)'
+        : 'rgba(3,30,48,0.96)';
+    });
+  </script>
+</body>
 </html>
