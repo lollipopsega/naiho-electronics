@@ -1,14 +1,14 @@
 :root {
-  --blue: #07588c;
-  --blue-dark: #073a5f;
-  --green: #0d653f;
-  --yellow: #f0cc32;
-  --ink: #123047;
-  --muted: #617786;
-  --line: #dce8ed;
-  --paper: #f7f4ef;
+  --blue: #07568a;
+  --blue-dark: #063e67;
+  --green: #0e633f;
+  --yellow: #efcf37;
+  --ink: #123044;
+  --muted: #5e7280;
+  --line: rgba(18, 48, 68, 0.14);
+  --paper: #f6f3ed;
   --white: #ffffff;
-  --shadow: 0 22px 50px rgba(7, 58, 95, 0.13);
+  --shadow: 0 24px 60px rgba(3, 35, 57, 0.16);
 }
 
 * {
@@ -24,8 +24,7 @@ body {
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
   background:
-    radial-gradient(circle at 12% 8%, rgba(13, 101, 63, 0.1), transparent 24rem),
-    radial-gradient(circle at 86% 16%, rgba(240, 204, 50, 0.14), transparent 20rem),
+    radial-gradient(circle at 18% 10%, rgba(105, 164, 58, 0.1), transparent 28rem),
     linear-gradient(180deg, #ffffff 0%, var(--paper) 100%);
 }
 
@@ -51,10 +50,10 @@ a {
   justify-content: space-between;
   gap: 20px;
   padding: 12px 14px 12px 20px;
-  border: 1px solid rgba(7, 88, 140, 0.12);
+  border: 1px solid rgba(7, 86, 138, 0.14);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 14px 32px rgba(7, 58, 95, 0.08);
+  box-shadow: 0 12px 34px rgba(6, 62, 103, 0.08);
   backdrop-filter: blur(14px);
 }
 
@@ -101,21 +100,21 @@ a {
 }
 
 .nav a:hover {
-  background: #edf5f8;
+  background: rgba(7, 86, 138, 0.08);
 }
 
 .nav-button,
 .button.primary {
   color: var(--white);
   background: var(--green);
-  box-shadow: 0 12px 22px rgba(13, 101, 63, 0.2);
+  box-shadow: 0 10px 22px rgba(14, 99, 63, 0.22);
   font-weight: 900;
 }
 
 .button.secondary {
   color: var(--blue-dark);
-  border: 1px solid rgba(7, 88, 140, 0.22);
-  background: var(--white);
+  border: 1px solid rgba(7, 86, 138, 0.24);
+  background: rgba(255, 255, 255, 0.78);
   font-weight: 900;
 }
 
@@ -168,7 +167,7 @@ h1 {
 
 .lead {
   max-width: 590px;
-  color: #35566a;
+  color: var(--green);
   font-size: clamp(1.15rem, 2.4vw, 1.5rem);
   line-height: 1.5;
 }
@@ -206,8 +205,8 @@ h1 {
 .service-grid article {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 16px 36px rgba(7, 58, 95, 0.08);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 42px rgba(6, 62, 103, 0.1);
 }
 
 .trust article {
@@ -344,7 +343,7 @@ h1 {
   padding: 10px 13px;
   border-radius: 8px;
   color: var(--blue-dark);
-  background: #eef7f2;
+  background: rgba(14, 99, 63, 0.1);
   font-size: 0.88rem;
   font-weight: 900;
 }
@@ -363,8 +362,8 @@ h1 {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 16px 36px rgba(7, 58, 95, 0.08);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 42px rgba(6, 62, 103, 0.1);
 }
 
 .figure-image {
@@ -414,7 +413,7 @@ h1 {
   border-radius: 8px;
   color: var(--white);
   background:
-    linear-gradient(135deg, rgba(7, 58, 95, 0.96), rgba(13, 101, 63, 0.9)),
+    linear-gradient(135deg, rgba(7, 86, 138, 0.94), rgba(14, 99, 63, 0.9)),
     url("assets/naiho-modelo.jpeg") center / cover;
   box-shadow: var(--shadow);
 }
