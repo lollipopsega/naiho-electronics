@@ -8,3 +8,20 @@
 @media(max-width:900px){.hero{grid-template-columns:1fr}.hero h1{font-size:clamp(38px,8vw,52px)}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-image{height:310px}}
 @media(max-width:600px){.hero h1{font-size:37px}.hero-visual{min-height:410px}.hero-visual img{max-height:390px}.hero-proof b{font-size:13px}.section-heading h2,.quality h2,.cta h2{font-size:31px}.product-grid{grid-template-columns:1fr}.product-image{height:360px}.product-info h3,.product-info p{min-height:0}.quality-image{min-height:440px}}
 .card-link{display:inline-flex;margin-top:17px;color:var(--bright);font-size:11px;font-weight:800}.card-link:hover{text-decoration:underline}
+
+/* Paleta original NAIHO */
+:root{--navy:#062234;--blue:#075b8f;--bright:#075b8f;--green:#117044;--yellow:#f6cf22;--cream:#f2efe7;--sky:#d9e8ef;--ink:#0a3d62;--muted:#526b7c;--line:#cfe0e9}
+body{background:var(--cream)}
+.header,.product-card,.tab{background:#fff}
+.logo span,.light-logo span{background:var(--yellow)}
+.topbar span{color:var(--yellow)}
+.hero{background:linear-gradient(115deg,#f2efe7 0%,#edf2ef 52%,#d9e8ef 100%)}
+.blue-orbit{background:linear-gradient(145deg,var(--green),var(--navy))}
+.eyebrow span,.primary,.badge{background:var(--blue)}
+.badge.cool,.floating-card>span{background:var(--green);color:#fff}
+.tab.active{background:var(--navy);border-color:var(--yellow);box-shadow:inset 0 -3px 0 var(--yellow)}
+.trust-strip,.products{background:#fff}
+.quality{background:var(--navy)}
+.kicker.light,.quality-list article>span{color:var(--yellow)}
+.cta{background:linear-gradient(120deg,#f6cf2230,#d9e8ef)}
+footer{background:#061d2d}
