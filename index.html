@@ -1,152 +1,112 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NAIHO Electronics | Calidad brasilera</title>
-    <meta name="description" content="Electrodomésticos NAIHO con tecnología moderna, eficiencia energética y servicio técnico autorizado en Bolivia.">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="topbar">
-      <a class="logo" href="#inicio" aria-label="NAIHO Electronics">
-        <span>NAIHO</span>
-        <small>Electronics</small>
-      </a>
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="#productos">Productos</a>
-        <a href="#calidad">Calidad</a>
-        <a href="#servicio">Servicio</a>
-        <a class="support" href="#servicio">Soporte técnico</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071d49">
+  <meta name="description" content="NAIHO: cocinas y refrigeradores de calidad, con fabricación brasileña y garantía en Latinoamérica.">
+  <title>NAIHO | Electrodomésticos para tu hogar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">Tecnología brasileña para hogares latinoamericanos <span>•</span> Garantía regional</div>
+  <header class="header" id="inicio">
+    <a class="logo" href="#inicio" aria-label="NAIHO inicio">NAIHO<span></span></a>
+    <button class="menu" aria-label="Abrir menú" aria-expanded="false"><i></i><i></i><i></i></button>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos" data-filter-link="refrigeradores">Refrigeradores</a>
+      <a href="#productos" data-filter-link="cocinas">Cocinas</a>
+      <a href="#calidad">Calidad brasileña</a>
+      <a href="#contacto" class="nav-cta">Contáctanos</a>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero" id="inicio">
-        <div class="hero-copy">
-          <p class="eyebrow">Change your home</p>
-          <h1>
-            <span>Calidad</span>
-            <strong>brasilera</strong>
-            <span>para tu hogar</span>
-          </h1>
-          <p class="hero-lead">
-            Electrodomésticos NAIHO con tecnología moderna, menor consumo energético y respaldo técnico autorizado en toda Bolivia.
-          </p>
-          <div class="hero-actions">
-            <a class="primary" href="#productos">Ver productos</a>
-            <a class="secondary" href="#servicio">Buscar servicio técnico</a>
-          </div>
-          <div class="hero-facts" aria-label="Datos destacados">
-            <div><strong>10+</strong><span>Ciudades</span></div>
-            <div><strong>A+</strong><span>Eficiencia</span></div>
-            <div><strong>R600</strong><span>Motor</span></div>
-          </div>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>★</span> Industria brasileña</div>
+        <h1>El corazón de tu cocina, hecho para durar.</h1>
+        <p>Cocinas NAIHO con horno amplio y cocción uniforme: el aliado ideal para tus recetas, tu repostería y cada momento en familia.</p>
+        <div class="hero-actions">
+          <a href="#productos" class="button primary">Ver cocinas <span>→</span></a>
+          <a href="#calidad" class="button secondary">Conocer la calidad</a>
         </div>
-
-        <div class="hero-art">
-          <img src="assets/naiho-linea.jpeg" alt="Línea completa de electrodomésticos NAIHO">
-          <div class="badge" aria-label="Industria brasilera">
-            <strong>BR</strong>
-            <span>Industria<br>brasilera</span>
-          </div>
+        <div class="hero-proof">
+          <div><b>4, 5 y 6</b><small>hornallas</small></div>
+          <div><b>Horno amplio</b><small>ideal para repostería</small></div>
+          <div><b>Garantía</b><small>en Latinoamérica</small></div>
         </div>
-      </section>
+      </div>
+      <div class="hero-visual">
+        <div class="blue-orbit"></div>
+        <span class="hero-label">Producto destacado</span>
+        <img src="assets/cocina-naiho-plata.png" alt="Cocina NAIHO plateada de cuatro hornallas, fabricación brasileña">
+        <div class="floating-card"><span>✓</span><div><b>Calidad certificada</b><small>Fabricación brasileña</small></div></div>
+      </div>
+    </section>
 
-      <section class="pillars" aria-label="Pilares de la marca">
-        <article>
-          <div class="icon layers" aria-hidden="true"></div>
-          <div>
-            <h2>Tecnología</h2>
-            <p>Soluciones pensadas para el uso diario con menos fallas y mayor durabilidad.</p>
-          </div>
+    <section class="trust-strip" aria-label="Ventajas NAIHO">
+      <article><span>◈</span><div><b>Diseño resistente</b><small>Materiales pensados para durar</small></div></article>
+      <article><span>♨</span><div><b>Cocción uniforme</b><small>Resultados deliciosos siempre</small></div></article>
+      <article><span>❄</span><div><b>Frío eficiente</b><small>Conservación que protege</small></div></article>
+      <article><span>✓</span><div><b>Respaldo regional</b><small>Brasil, Bolivia y Latinoamérica</small></div></article>
+    </section>
+
+    <section class="products section" id="productos">
+      <div class="section-heading">
+        <div><span class="kicker">CONOCE NUESTRA LÍNEA</span><h2>Diseñados para tu día a día</h2></div>
+        <p>Soluciones confiables que combinan capacidad, eficiencia y un estilo que transforma tu hogar.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Categorías de productos">
+        <button class="tab active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+        <button class="tab" data-filter="refrigeradores" role="tab">Refrigeradores</button>
+        <button class="tab" data-filter="cocinas" role="tab">Cocinas</button>
+        <button class="tab" data-filter="6-hornallas" role="tab">6 hornallas</button>
+        <button class="tab" data-filter="5-hornallas" role="tab">5 hornallas</button>
+        <button class="tab" data-filter="4-hornallas" role="tab">4 hornallas</button>
+      </div>
+      <div class="product-grid">
+        <article class="product-card featured" data-category="cocinas 4-hornallas">
+          <div class="product-image local"><span class="badge">DESTACADA</span><img src="assets/cocina-naiho-negra.png" alt="Cocina NAIHO negra de cuatro hornallas"></div>
+          <div class="product-info"><small>COCINAS</small><h3>Cocina NAIHO 4 hornallas</h3><p>Compacta, potente y con horno amplio para repostería.</p><div class="chips"><span>Horno amplio</span><span>Acero</span></div></div>
         </article>
-        <article>
-          <div class="icon sun" aria-hidden="true"></div>
-          <div>
-            <h2>Diseño</h2>
-            <p>Acabados en acero inoxidable para cocinas modernas y espacios actuales.</p>
-          </div>
+        <article class="product-card" data-category="refrigeradores">
+          <div class="product-image fridge one"><span class="badge cool">NUEVO</span><div class="appliance fridge-art"><i></i><i></i></div></div>
+          <div class="product-info"><small>REFRIGERACIÓN</small><h3>Refrigerador Doble Puerta</h3><p>Más espacio, orden y frescura para toda la familia.</p><div class="chips"><span>No Frost</span><span>Gran capacidad</span></div></div>
         </article>
-        <article>
-          <div class="icon shield" aria-hidden="true"></div>
-          <div>
-            <h2>Confianza</h2>
-            <p>Garantía y soporte técnico autorizado a nivel nacional en Bolivia.</p>
-          </div>
+        <article class="product-card" data-category="refrigeradores">
+          <div class="product-image fridge two"><div class="appliance fridge-art slim"><i></i><i></i></div></div>
+          <div class="product-info"><small>REFRIGERACIÓN</small><h3>Refrigerador Clásico</h3><p>Eficiencia y conservación confiable en un diseño versátil.</p><div class="chips"><span>Eficiente</span><span>Silencioso</span></div></div>
         </article>
-      </section>
+        <article class="product-card" data-category="cocinas 6-hornallas">
+          <div class="product-image stove blue"><div class="appliance stove-art"><div class="burners"><i></i><i></i><i></i><i></i><i></i><i></i></div><b>NAIHO</b></div></div>
+          <div class="product-info"><small>COCINAS</small><h3>Cocina NAIHO 6 hornallas</h3><p>Máxima capacidad para quienes cocinan a lo grande.</p><div class="chips"><span>6 hornallas</span><span>Extra amplia</span></div></div>
+        </article>
+        <article class="product-card" data-category="cocinas 5-hornallas">
+          <div class="product-image stove silver"><div class="appliance stove-art"><div class="burners five"><i></i><i></i><i></i><i></i><i></i></div><b>NAIHO</b></div></div>
+          <div class="product-info"><small>COCINAS</small><h3>Cocina NAIHO 5 hornallas</h3><p>Potencia versátil y control preciso para cada preparación.</p><div class="chips"><span>5 hornallas</span><span>Multifunción</span></div></div>
+        </article>
+        <article class="product-card" data-category="cocinas 4-hornallas">
+          <div class="product-image local crop"><img src="assets/cocina-naiho-plata.png" alt="Cocina NAIHO plateada de cuatro hornallas"></div>
+          <div class="product-info"><small>COCINAS</small><h3>Cocina NAIHO 4 hornallas</h3><p>El tamaño perfecto con un horno que sorprende por su capacidad.</p><div class="chips"><span>4 hornallas</span><span>Fácil limpieza</span></div></div>
+        </article>
+      </div>
+    </section>
 
-      <section class="products" id="productos">
-        <div class="section-head">
-          <p class="eyebrow">Línea completa</p>
-          <h2>Electrodomésticos NAIHO</h2>
-          <p>Una gama completa para refrigeración, lavado y cocina. Estética de acero, funcionamiento eficiente y respaldo técnico en toda Bolivia.</p>
-        </div>
+    <section class="quality" id="calidad">
+      <div class="quality-image"><img src="assets/cocina-naiho-negra.png" alt="Detalle de cocina NAIHO de fabricación brasileña"><span>Hecho en<br><b>Brasil</b></span></div>
+      <div class="quality-copy"><span class="kicker light">CALIDAD QUE SE SIENTE</span><h2>Ingeniería brasileña,<br>confianza latinoamericana.</h2><p>En NAIHO sabemos que un electrodoméstico es parte de tu familia. Por eso combinamos fabricación robusta, diseño funcional y un respaldo pensado para acompañarte.</p>
+        <div class="quality-list"><article><span>01</span><div><b>Hornos para resultados extraordinarios</b><p>Temperatura estable y espacio generoso, ideal para panes, tortas y repostería.</p></div></article><article><span>02</span><div><b>Resistencia para el uso diario</b><p>Construcción sólida y superficies prácticas para una limpieza sencilla.</p></div></article><article><span>03</span><div><b>Garantía con alcance regional</b><p>Respaldo en Brasil, Bolivia y países de Latinoamérica.</p></div></article></div>
+      </div>
+    </section>
 
-        <div class="product-grid">
-          <article class="catalog-image">
-            <img src="assets/naiho-modelo.jpeg" alt="Refrigerador NAIHO modelo NH-I220F">
-          </article>
-          <article class="product-card">
-            <span>01</span>
-            <h3>Refrigeración</h3>
-            <p>Conserva tus alimentos con equipos robustos, prácticos y de bajo consumo energético A+.</p>
-          </article>
-          <article class="product-card">
-            <span>02</span>
-            <h3>Lavado</h3>
-            <p>Lavadoras con controles claros, gran presencia visual y uso sencillo para toda la familia.</p>
-          </article>
-          <article class="product-card">
-            <span>03</span>
-            <h3>Cocina</h3>
-            <p>Cocinas de acabado metálico para completar el hogar con una imagen profesional.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="quality" id="calidad">
-        <div class="quality-copy">
-          <p class="eyebrow">Calidad brasilera</p>
-          <h2>Hecho para durar</h2>
-          <p>Cada producto NAIHO es fabricado con estándares de la industria brasilera, certificado y diseñado para las condiciones del mercado boliviano.</p>
-        </div>
-        <div class="benefits">
-          <article>Mayor tolerancia a variaciones eléctricas</article>
-          <article>Motor R600 de larga vida útil</article>
-          <article>Menor consumo energético A+</article>
-          <article>Acabado en acero inoxidable</article>
-          <article>Capa anticorrosiva para zonas húmedas</article>
-          <article>Menos componentes electrónicos, menos fallas</article>
-          <article>Garantía a nivel nacional</article>
-          <article>Condensador exterior + Certificación 2024</article>
-        </div>
-      </section>
-
-      <section class="service" id="servicio">
-        <div class="section-head">
-          <p class="eyebrow">Servicios técnicos autorizados</p>
-          <h2>Soporte en Bolivia</h2>
-          <p>Contactos organizados por ciudad para encontrar atención técnica autorizada rápidamente.</p>
-        </div>
-        <div class="service-grid">
-          <article><strong>La Paz</strong><span>2-2462234 / 72587956</span></article>
-          <article><strong>Cochabamba</strong><span>65312173 / 79777909</span></article>
-          <article><strong>Oruro</strong><span>2-5289994 / 76130083</span></article>
-          <article><strong>Santa Cruz</strong><span>3-3241862 / 75097319</span></article>
-          <article><strong>Sucre</strong><span>70327944 / 78931820</span></article>
-          <article><strong>Tarija</strong><span>6655455 / 67384111</span></article>
-          <article><strong>Potosí</strong><span>71816023</span></article>
-          <article><strong>Trinidad</strong><span>78289059 / 72821655</span></article>
-          <article><strong>Cobija</strong><span>74757870</span></article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <strong>NAIHO Electronics</strong>
-      <span>Change your home</span>
-    </footer>
-  </body>
+    <section class="cta" id="contacto"><div><span class="kicker">TU HOGAR MERECE MÁS</span><h2>Encuentra tu NAIHO ideal.</h2><p>Consulta modelos, disponibilidad y distribuidores autorizados en tu país.</p></div><a class="button primary" href="https://wa.me/591" target="_blank" rel="noopener">Hablar con un asesor <span>→</span></a></section>
+  </main>
+  <footer><a class="logo light-logo" href="#inicio">NAIHO<span></span></a><p>Electrodomésticos pensados para acompañar tu vida.</p><div><a href="#productos">Productos</a><a href="#calidad">Calidad</a><a href="#contacto">Contacto</a></div><small>© 2026 NAIHO. Todos los derechos reservados.</small></footer>
+  <script src="script.js"></script>
+</body>
 </html>
